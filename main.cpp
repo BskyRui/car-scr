@@ -1,5 +1,7 @@
 #include <QGuiApplication>
 #include <QQmlApplicationEngine>
+#include <QQmlContext>
+#include "Interface/Interface.h"
 
 int main(int argc, char *argv[])
 {
@@ -13,6 +15,8 @@ int main(int argc, char *argv[])
         &app,
         []() { QCoreApplication::exit(-1); },
         Qt::QueuedConnection);
+    // 3) 关联 CPP 对象
+    engine.rootContext()->setContextProperty("ui", INTERFACE);
     engine.load(url);
 
     return app.exec();
