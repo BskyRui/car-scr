@@ -3,6 +3,8 @@ cmake_minimum_required(VERSION 3.16)
 project(CarScreen VERSION 0.1 LANGUAGES CXX)
 
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
+# 自动调用 Qt 的资源编译器 (rcc) 来处理 .qrc 文件
+set(CMAKE_AUTORCC ON)
 
 find_package(Qt6 6.4 REQUIRED COMPONENTS Quick)
 
@@ -12,6 +14,7 @@ qt_add_executable(appCarScreen
     main.cpp
 )
 
+# 创建、管理 qml 模块
 qt_add_qml_module(appCarScreen
     URI CarScreen
     VERSION 1.0
