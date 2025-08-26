@@ -20,6 +20,11 @@ qt_add_qml_module(appCarScreen
     VERSION 1.0
     QML_FILES
         Main.qml
+        HMI/App.qml
+        HMI/AC.qml
+        HMI/ControlCenter.qml
+        HMI/Home.qml
+        HMI/Settings.qml
 
     SOURCES
         Interface/Interface.h
