@@ -1,6 +1,7 @@
 #include <QGuiApplication>
 #include <QQmlApplicationEngine>
 #include <QQmlContext>
+#include <QIcon>
 #include "Interface/Interface.h"
 
 int main(int argc, char *argv[])
@@ -15,6 +16,7 @@ int main(int argc, char *argv[])
         &app,
         []() { QCoreApplication::exit(-1); },
         Qt::QueuedConnection);
+    app.setWindowIcon(QIcon(":/Images/Home/vehicle.png"));
     // 3) 关联 CPP 对象
     engine.rootContext()->setContextProperty("ui", INTERFACE);
     engine.load(url);

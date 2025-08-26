@@ -1,8 +1,8 @@
 import QtQuick
 
 Window {
-    width: 640
-    height: 480
+    width: 1520
+    height: 856
     visible: true
-    title: qsTr("Hello World")
+    title: qsTr("CAR")
 }

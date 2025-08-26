@@ -24,6 +24,7 @@ qt_add_qml_module(appCarScreen
     SOURCES
         Interface/Interface.h
         Interface/Interface.cpp
+        RESOURCES resourcesa.qrc
 )
 
 # Qt for iOS sets MACOSX_BUNDLE_GUI_IDENTIFIER automatically since Qt 6.1.
